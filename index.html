@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中油 PAY 模擬網站</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+    <!-- 登入/註冊頁面 -->
+    <section id="auth-section" class="section">
+        <h1>中油 PAY</h1>
+        <div class="auth-container">
+            <div class="form" id="login-form">
+                <h2>會員登入</h2>
+                <input type="text" id="login-user" placeholder="帳號 (手機或Email)" />
+                <input type="password" id="login-password" placeholder="密碼" />
+                <button onclick="login()">登入</button>
+            </div>
+            <div class="form" id="signup-form">
+                <h2>申辦會員</h2>
+                <input type="text" id="signup-name" placeholder="姓名" />
+                <input type="text" id="signup-phone" placeholder="手機號碼" />
+                <input type="email" id="signup-email" placeholder="Email" />
+                <input type="password" id="signup-password" placeholder="密碼" />
+                <button onclick="signup()">註冊</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主頁面 -->
+    <section id="main-section" class="section hidden">
+        <header>
+            <h1>歡迎使用中油 PAY</h1>
+            <button onclick="logout()">登出</button>
+        </header>
+        <div class="main-grid">
+            <div class="card">
+                <h2>即時油價</h2>
+                <p>92無鉛汽油：30.1 元</p>
+                <p>95無鉛汽油：31.6 元</p>
+                <p>柴油：28.2 元</p>
+            </div>
+            <div class="card">
+                <h2>特惠資訊</h2>
+                <ul>
+                    <li>本週會員加油送紅利點數</li>
+                    <li>週三加油享95折優惠</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form">
+            <h2>付款資訊填寫</h2>
+            <input type="text" placeholder="車牌號碼" />
+            <input type="number" placeholder="加油金額 (NT$)" />
+            <select>
+                <option>信用卡</option>
+                <option>悠遊卡</option>
+                <option>Line Pay</option>
+            </select>
+            <button>確認付款</button>
+        </div>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
