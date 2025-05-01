@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="app">
-    <!-- 登入/註冊頁面 -->
+    <!-- 登入頁面 -->
     <section id="auth-section" class="section">
         <h1>中油 PAY</h1>
         <div class="auth-container">
@@ -18,14 +18,17 @@
                 <input type="text" id="login-user" placeholder="帳號 (手機或Email)" />
                 <input type="password" id="login-password" placeholder="密碼" />
                 <button onclick="login()">登入</button>
+                <button onclick="toggleSignup()">註冊會員</button>
             </div>
-            <div class="form" id="signup-form">
+
+            <div class="form hidden" id="signup-form">
                 <h2>申辦會員</h2>
                 <input type="text" id="signup-name" placeholder="姓名" />
                 <input type="text" id="signup-phone" placeholder="手機號碼" />
                 <input type="email" id="signup-email" placeholder="Email" />
                 <input type="password" id="signup-password" placeholder="密碼" />
                 <button onclick="signup()">註冊</button>
+                <button onclick="toggleSignup()">返回登入</button>
             </div>
         </div>
     </section>
@@ -65,6 +68,3 @@
         </div>
     </section>
 </div>
-<script src="script.js"></script>
-</body>
-</html>
