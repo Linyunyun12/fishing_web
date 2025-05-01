@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+.sidebar,
+.feed,
+.contacts {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.sidebar {
+    background-color: #e9ebee;
+}
+
+.feed {
+    background-color: #fff;
+}
+
+.contacts {
+    background-color: #f5f6f7;
+}
