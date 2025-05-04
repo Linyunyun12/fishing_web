@@ -9,7 +9,7 @@ document.querySelectorAll(".sidebar ul li").forEach(item => {
 const likeBtn = document.querySelector(".post-actions button:nth-child(1)");
 const likeCount = document.querySelector(".reactions span");
 let liked = false;
-let likeNumber = 97;
+let likeNumber = 86;
 
 likeBtn.addEventListener("click", () => {
     liked = !liked;
