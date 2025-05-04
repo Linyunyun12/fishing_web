@@ -18,11 +18,11 @@
       <input type="text" placeholder="電子郵件地址或手機號碼" />
       <input type="password" placeholder="密碼" />
       <button id="login-btn">登入</button>
-      <a href="#" id="forgot-link">忘記密碼？</a>
+      <a href="#"id="forgot-link">忘記密碼？</a>
       <hr />
       <button class="register-btn" id="register-btn">建立新帳號</button>
     </div>
-    <p style="text-align: center;">為名人、品牌或商家<a href="#">建立粉絲專頁</a>。</p>
+    <p style="text-align: center;">為名人、品牌或商家<a href="#" class="build">建立粉絲專頁</a>。</p>
 
   </div>
 </div>
@@ -31,26 +31,33 @@
 <!-- 建立帳號 Modal -->
 <div class="modal-overlay" id="register-modal">
   <div class="modal">
-    <h1 style="color: #0866fd;">Facebook</h1>
-    <h2>建立新帳號</h2>
-    <p>快速又簡單。</p>
-    <input type="text" placeholder="姓氏" />
-    <input type="text" placeholder="名字" />
+    <button class="close-btn" id="close-modal">&times;</button> <!-- 新增關閉鍵 -->
+    <h1>facebook</h1>
+    <h2 style="text-align: center;">建立新帳號</h2>
+    <hr />
+    <p class="sec-title">快速又簡單。</p>
+
+    <input type="text" id="last-name" placeholder="姓氏" required />
+    <input type="text" id="first-name" placeholder="名字" required />
 
     <label for="birthdate">出生日期</label><br/>
-    <input type="date" id="birthdate" name="birthdate" max="2025-05-01">
-    <br/>
+    <input type="date" id="birthdate" max="2025-05-01" required><br/>
 
     <label>性別</label><br/>
-    <select>
-      <option>女</option>
-      <option>男</option>
-      <option>其他</option>
-    </select>
-    <br/>
-    <input type="text" placeholder="手機號碼或電子郵件地址" />
-    <input type="password" placeholder="設定密碼" />
-    <button id="register-submit">註冊</button>
+    <select id="gender" required>
+      <option value="">請選擇</option> <!-- 預設空白 -->
+      <option value="女">女</option>
+      <option value="男">男</option>
+      <option value="其他">其他</option>
+    </select><br/>
+
+    <input type="text" id="contact" placeholder="手機號碼或電子郵件地址" required />
+    <input type="password" id="new-password" placeholder="設定密碼" required />
+    <p class="serves-rule">使用我們服務的用戶可能已上傳你的聯絡資料到 Facebook。瞭解詳情。 點擊「註冊」即表示你同意我們的《服務條款》、《隱私政策》和《Cookie 政策》。你可能會收到我們的簡訊通知，你隨時可選擇停止接收</p>
+    <button class="submit-btn" id="register-submit" disabled>註冊</button>
+    <div style="display: flex; justify-content: center;">
+      <a href="#" class="had-submitted" id="had submitted">已經有帳號了？</a>
+    </div>
   </div>
 </div>
 

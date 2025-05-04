@@ -1,22 +1,22 @@
+/* ====== 全站基本樣式 ====== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
 }
 
+/* ====== 標題與說明文字 ====== */
 .title {
     color: #0866fd;
-    font-family: 'Arial', sans-serif;
     font-size: 3.5rem;
-    /*自訂行距*/
     line-height: 0.1;
 }
 
 .description {
-    font-family: 'Arial', sans-serif;
     font-size: 2rem;
 }
 
+/* ====== 主容器與左右區塊 ====== */
 .container {
     display: flex;
     justify-content: center;
@@ -25,18 +25,18 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     height: 100vh;
-    gap: 10px; /* 增加區塊間距 */
+    gap: 10px;
 }
 
-.side-text{
-    font-family: 'Arial', sans-serif;
+.side-text {
     font-size: 2rem;
     margin-top: 20px;
     margin-right: 100px;
-    color: #000000;
+    color: #000;
     flex: 1;
 }
 
+/* ====== 登入表單區塊樣式 ====== */
 .login-box {
     background-color: white;
     padding: 2rem;
@@ -47,18 +47,9 @@ body {
     flex: 1;
 }
 
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #000000; /* 可依設計風格調整 */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-.login-box input, .login-box button {
+/* 表單元件（輸入框與按鈕） */
+.login-box input,
+.login-box button {
     width: 100%;
     padding: 10px;
     margin-top: 12px;
@@ -67,6 +58,7 @@ a:hover {
     font-size: 16px;
 }
 
+/* 登入按鈕樣式 */
 .login-box button {
     background-color: #0866fd;
     color: white;
@@ -75,11 +67,13 @@ a:hover {
     cursor: pointer;
 }
 
+/* 建立帳號按鈕（綠色） */
 .login-box .register-btn {
     background-color: #42b72a;
     margin-top: 20px;
 }
 
+/* 忘記密碼連結樣式 */
 .login-box a {
     display: block;
     margin-top: 10px;
@@ -88,6 +82,18 @@ a:hover {
     font-size: 14px;
 }
 
+/* ====== 連結樣式 ====== */
+.build {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.build:hover {
+    text-decoration: underline;
+}
+
+/* ====== 註冊彈出視窗（Modal） ====== */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -99,7 +105,9 @@ a:hover {
     z-index: 999;
 }
 
+/* Modal 主體 */
 .modal {
+    position: relative;
     background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
@@ -108,7 +116,9 @@ a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.modal input, .modal select {
+/* Modal 中的輸入欄位與下拉選單 */
+.modal input,
+.modal select {
     width: 100%;
     padding: 8px;
     margin: 6px 0;
@@ -116,7 +126,31 @@ a:hover {
     border: 1px solid #ccc;
 }
 
-.modal button {
+/* Modal 中的標題 */
+.modal h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #0866fd;
+    text-align: center;
+}
+
+/* Modal 中的說明文字 */
+.sec-title{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #737373;
+    text-align: center;
+}
+
+.serves-rule{
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    color: #737373;
+    text-align: center;
+}
+
+/* Modal 中的註冊按鈕 */
+.submit-btn {
     width: 100%;
     padding: 10px;
     background-color: #42b72a;
@@ -127,6 +161,37 @@ a:hover {
     cursor: pointer;
 }
 
+.submit-btn:disabled {
+    background-color: #cccccc;  /* 灰色背景 */
+    cursor: not-allowed;        /* 顯示不能點 */
+    color: #666666;             /* 文字也變灰 */
+}
+
+
+.had-submitted{
+    background-color: #ffffff;
+    color: #0866fd;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* Modal 中的關閉按鈕 */
+.close-btn {
+    position: absolute; /* 絕對定位才能放右上角 */
+    top: 10px;
+    right: 15px;
+    background-color: #fff;
+    color: #737373;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ====== 頁尾區塊（語言列） ====== */
 .footer {
     padding: 10px;
     background-color: #f5f6f7;
@@ -135,6 +200,7 @@ a:hover {
     text-align: center;
 }
 
+/* 語言與資訊列容器 */
 .language-links,
 .footer-links {
     display: flex;
@@ -144,6 +210,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
+/* 語言與連結樣式 */
 .language-links a,
 .footer-links a {
     color: #737373;
@@ -155,10 +222,10 @@ a:hover {
     text-decoration: underline;
 }
 
+/* 語言列中 "+" 按鈕樣式 */
 .language-links button {
     border: none;
     background: none;
     font-weight: bold;
     cursor: pointer;
 }
-
