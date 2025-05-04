@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -7,10 +8,72 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+<header class="topbar">
+    Facebook
+    <button id="logout-btn" style="float: right; background: white; color: #0866fd; border: none; padding: 5px 10px; border-radius: 4px; font-weight: bold; cursor: pointer;">
+        登出
+    </button>
+</header>
+
 <div class="main-layout">
-    <aside class="sidebar">側邊欄</aside>
-    <main class="feed">動態牆</main>
-    <aside class="contacts">聯絡人</aside>
+    <aside class="sidebar">
+        <div class="profile-box">
+            <div class="avatar-large"></div>
+            <p>使用者名稱</p>
+        </div>
+        <ul>
+            <li></li>
+            <li class="menu-item"><span class="icon">👤</span> 個人檔案</li>
+            <li class="menu-item"><span class="icon">👥</span> 朋友</li>
+            <li class="menu-item"><span class="icon">👨‍👩‍👧‍👦</span> 社團</li>
+        </ul>
+    </aside>
+
+    <main class="feed">
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-box">
+                    <div class="avatar-large"></div>
+                    <p>VALORANT</p>
+                    <p class="post-time">贊助．🌐</p>
+                </div>
+            </div>
+            <p class="post-text">秀出地區代表色，或換上你最愛的顏色。</p>
+            <img src=" " alt="post image" class="post-image">
+
+            <div class="post-footer">
+                <div class="reactions">
+                    <span>👍 97</span>
+                </div>
+                <div class="post-actions">
+                    <button>👍 讚</button>
+                    <button>💬 留言</button>
+                    <button>🔁 分享</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+<!--    <aside class="contacts">-->
+    <aside class="sidebar">
+        <h3>聯絡人</h3>
+            <div class="menu-item">
+                <div class="profile-box">
+                    <div class="avatar"></div>
+                        <p>小明</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="profile-box">
+                    <div class="avatar"></div>
+                    <p>小明</p>
+                </div>
+            </div>
+
+    </aside>
+
+
 </div>
+<script src="index.js"></script>
 </body>
 </html>

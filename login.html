@@ -2,24 +2,74 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facebook 登入</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook-登入或註冊</title>
   <link rel="stylesheet" href="login.css" />
 </head>
 <body>
-<div class="login-container">
-  <div class="login-box">
-    <h1 class="logo">facebook</h1>
-    <form id="loginForm">
-      <input type="text" placeholder="電子郵件或手機號碼" id="email" required />
-      <input type="password" placeholder="密碼" id="password" required />
-      <button type="submit">登入</button>
-    </form>
-    <a href="#" class="forgot">忘記密碼？</a>
-    <hr />
-    <button class="create-account">建立新帳號</button>
+
+<div class="container">
+  <div class="side-text" >
+    <h2 class="title">facebook</h2>
+    <p class="description">Facebook，讓你和親朋好友保持聯繫，隨時分享生活中的每一刻。</p>
+  </div>
+  <div>
+    <div class="login-box">
+      <input type="text" placeholder="電子郵件地址或手機號碼" />
+      <input type="password" placeholder="密碼" />
+      <button id="login-btn">登入</button>
+      <a href="#" id="forgot-link">忘記密碼？</a>
+      <hr />
+      <button class="register-btn" id="register-btn">建立新帳號</button>
+    </div>
+    <p style="text-align: center;">為名人、品牌或商家<a href="#">建立粉絲專頁</a>。</p>
+
   </div>
 </div>
+
+
+<!-- 建立帳號 Modal -->
+<div class="modal-overlay" id="register-modal">
+  <div class="modal">
+    <h1 style="color: #0866fd;">Facebook</h1>
+    <h2>建立新帳號</h2>
+    <p>快速又簡單。</p>
+    <input type="text" placeholder="姓氏" />
+    <input type="text" placeholder="名字" />
+
+    <label for="birthdate">出生日期</label><br/>
+    <input type="date" id="birthdate" name="birthdate" max="2025-05-01">
+    <br/>
+
+    <label>性別</label><br/>
+    <select>
+      <option>女</option>
+      <option>男</option>
+      <option>其他</option>
+    </select>
+    <br/>
+    <input type="text" placeholder="手機號碼或電子郵件地址" />
+    <input type="password" placeholder="設定密碼" />
+    <button id="register-submit">註冊</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="language-links">
+    <a href="#">中文(台灣)</a>
+    <a href="#">English (US)</a>
+    <a href="#">Tiếng Việt</a>
+    <a href="#">Bahasa Indonesia</a>
+    <a href="#">ภาษาไทย</a>
+    <a href="#">日本語</a>
+    <a href="#">Español</a>
+    <a href="#">Português (Brasil)</a>
+    <a href="#">Français (France)</a>
+    <a href="#">Deutsch</a>
+    <a href="#">Italiano</a>
+    <button>+</button>
+</footer>
+
 <script src="login.js"></script>
 </body>
 </html>

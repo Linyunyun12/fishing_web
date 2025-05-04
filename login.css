@@ -1,67 +1,164 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f0f2f5;
+    background-color: #f0f2f5;
 }
 
-.login-container {
+.title {
+    color: #0866fd;
+    font-family: 'Arial', sans-serif;
+    font-size: 3.5rem;
+    /*自訂行距*/
+    line-height: 0.1;
+}
+
+.description {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     height: 100vh;
+    gap: 10px; /* 增加區塊間距 */
+}
+
+.side-text{
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-right: 100px;
+    color: #000000;
+    flex: 1;
 }
 
 .login-box {
-    background: white;
+    background-color: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 300px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    text-align: center;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000; /* 可依設計風格調整 */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.login-box input, .login-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.login-box button {
+    background-color: #0866fd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.login-box .register-btn {
+    background-color: #42b72a;
+    margin-top: 20px;
+}
+
+.login-box a {
+    display: block;
+    margin-top: 10px;
+    color: #0866fd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal input, .modal select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42b72a;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #f5f6f7;
+    font-size: 12px;
+    color: #737373;
     text-align: center;
 }
 
-.logo {
-    color: #1877f2;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.language-links,
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    background-color: #1877f2;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button.create-account {
-    background-color: #42b72a;
-}
-
-.forgot {
-    display: block;
-    margin: 12px 0;
-    font-size: 0.9rem;
-    color: #1877f2;
+.language-links a,
+.footer-links a {
+    color: #737373;
     text-decoration: none;
 }
 
-hr {
-    margin: 1rem 0;
+.language-links a:hover,
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.language-links button {
     border: none;
-    border-top: 1px solid #ccc;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
